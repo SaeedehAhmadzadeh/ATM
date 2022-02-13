@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "7bc745b4-2326-489d-ad9e-168c36d427b5",
+		"name": "bank-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:81/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pinType\":\"FINGERPRINT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:81/register",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:81/cashWithdrawal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ef8c6137-a66e-4b54-b07b-96838d50c623",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cash\":100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:81/cashWithdrawal",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"cashWithdrawal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:81/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \"cardNumber\": \"943656\",\r\n        \"pin\": \"0608\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:81/login",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:81/checkCardNumber",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"cardNumber\":\"766568\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:81/checkCardNumber",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"checkCardNumber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:81/checkBalance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ef8c6137-a66e-4b54-b07b-96838d50c623",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:81/checkBalance",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"checkBalance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:81/cashDeposit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ef8c6137-a66e-4b54-b07b-96838d50c623",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cash\":100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:81/cashDeposit",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"cashDeposit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

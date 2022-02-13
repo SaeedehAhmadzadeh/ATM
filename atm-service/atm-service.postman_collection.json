@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "6fcd4313-8963-4fd4-ac2c-7485e70f9ed9",
+		"name": "atm-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost/insertPin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"pin\":\"3355\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/insertPin",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"insertPin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/insertCard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cardNumber\":\"063011\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/insertCard",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"insertCard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/checkBalance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/checkBalance",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"checkBalance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/cashDeposit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ef8c6137-a66e-4b54-b07b-96838d50c623",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cash\":200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/cashDeposit",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cashDeposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/cashWithdrawal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ef8c6137-a66e-4b54-b07b-96838d50c623",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cash\":100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/cashWithdrawal",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cashWithdrawal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/ejected",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost/ejected",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ejected"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
